@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App23.ListPage">
+    <ContentPage.Content>
+        
+        
+        <StackLayout>
+            <Button x:Name="borrar" Clicked="borrar_Clicked" Text="DeleteALL"></Button>
+            <ScrollView>
+                <ListView  x:Name="listadeciudades" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Image Source="{Binding Urlicon}" HeightRequest="150" />
+                                <Label Text="{Binding City}" FontSize="Small" FontAttributes="Bold"  HeightRequest="50" />
+
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
